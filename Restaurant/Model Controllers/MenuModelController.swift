@@ -10,8 +10,10 @@ import Foundation
 
 class MenuModelController
 {
-    //let baseURL = URL(string: "http://localhost:8090/")
-    let baseURL = URL(string: "http://192.168.0.9:8090/")!
+    static let shared = MenuModelController()
+    
+    let baseURL = URL(string: "http://localhost:8090/")!
+    //let baseURL = URL(string: "http://192.168.0.9:8090/")!
     
     func fetchCategories(completionHandler: @escaping ([String]?) -> Void)
     {

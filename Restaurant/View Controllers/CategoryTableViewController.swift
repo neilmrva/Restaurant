@@ -10,14 +10,13 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController
 {
-    let menuModelController = MenuModelController()
     var categories = [String]()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        menuModelController.fetchCategories(completionHandler: onCategoriesFetched)
+        MenuModelController.shared.fetchCategories(completionHandler: onCategoriesFetched)
     }
     
     func onCategoriesFetched(categories:[String]?)
