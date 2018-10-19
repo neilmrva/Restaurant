@@ -21,10 +21,17 @@ class CategoryTableViewController: UITableViewController
     
     func onCategoriesFetched(categories:[String]?)
     {
-        DispatchQueue.main.async
+        if let returnedCategories = categories
         {
-            self.categories = categories!
-            self.tableView.reloadData()
+            DispatchQueue.main.async
+            {
+                self.categories = returnedCategories
+                self.tableView.reloadData()
+            }
+        }
+        else
+        {
+            print("onCategoriesFetched() - No categories returned from server")
         }
     }
 

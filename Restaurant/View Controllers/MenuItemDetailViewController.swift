@@ -17,6 +17,7 @@ class MenuItemDetailViewController: UIViewController
     @IBOutlet weak var addToOrderButton:UIButton!
     
     var menuItem:MenuItem!
+    var delegate:AddToOrderDelegate?
     
     override func viewDidLoad()
     {
@@ -27,9 +28,29 @@ class MenuItemDetailViewController: UIViewController
         titleLabel.text = menuItem.name
         descriptionLabel.text = menuItem.description
         priceLabel.text = String(format: "$%.2f", menuItem.price)
+        addToOrderButton.layer.cornerRadius = 5.0
+        
+        //Set delegate
+        if let navigationController = tabBarController?.viewControllers?.last as? UINavigationController
+        {
+            if let orderTableViewController = navigationController.viewControllers.first as? OrderTableViewController
+            {
+                delegate = orderTableViewController
+            }
+        }
     }
     
-
+    @IBAction func onAddToOrder()
+    {
+        UIView.animate(withDuration: 0.2)
+        {
+            self.addToOrderButton.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+            self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }
+        
+        delegate?.added(menuItem: menuItem)
+    }
+    
     /*
     // MARK: - Navigation
 
