@@ -1,0 +1,5 @@
+1) Open Terminal
+2) Change directory to where python script is located ( cd [Drag Location] )
+3) Run server script ( python OpenRestaurant.py )
+4) Validate JSON is returned in safari ( http://localhost:8090/categories )
+5) To test on connected iPhone, find IP address of Mac, update python script to run server on that address and make sure iPhone is connected to same WiFi

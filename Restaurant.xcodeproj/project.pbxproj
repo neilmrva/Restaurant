@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		96C14C712188DC0800F4104C /* MenuModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C14C702188DC0800F4104C /* MenuModelController.swift */; };
+		96C14C7E2188DE7400F4104C /* OpenRestaurant.py in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C772188DE7400F4104C /* OpenRestaurant.py */; };
+		96C14C7F2188DE7400F4104C /* Cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C792188DE7400F4104C /* Cart.png */; };
+		96C14C802188DE7400F4104C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C7A2188DE7400F4104C /* README.md */; };
+		96C14C812188DE7400F4104C /* Plate.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C7B2188DE7400F4104C /* Plate.png */; };
+		96C14C822188DE7400F4104C /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C7C2188DE7400F4104C /* menu.json */; };
+		96C14C832188DE7400F4104C /* Steps To Run.txt in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C7D2188DE7400F4104C /* Steps To Run.txt */; };
 		96DD9DC02174DA20004612AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD9DBF2174DA20004612AF /* AppDelegate.swift */; };
 		96DD9DC52174DA20004612AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DD9DC32174DA20004612AF /* Main.storyboard */; };
 		96DD9DC72174DA21004612AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DD9DC62174DA21004612AF /* Assets.xcassets */; };
@@ -22,6 +28,12 @@
 
 /* Begin PBXFileReference section */
 		96C14C702188DC0800F4104C /* MenuModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModelController.swift; sourceTree = "<group>"; };
+		96C14C772188DE7400F4104C /* OpenRestaurant.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = OpenRestaurant.py; sourceTree = "<group>"; };
+		96C14C792188DE7400F4104C /* Cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cart.png; sourceTree = "<group>"; };
+		96C14C7A2188DE7400F4104C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		96C14C7B2188DE7400F4104C /* Plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plate.png; sourceTree = "<group>"; };
+		96C14C7C2188DE7400F4104C /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
+		96C14C7D2188DE7400F4104C /* Steps To Run.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Steps To Run.txt"; sourceTree = "<group>"; };
 		96DD9DBC2174DA20004612AF /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DD9DBF2174DA20004612AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96DD9DC42174DA20004612AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +67,27 @@
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
+		96C14C762188DE7400F4104C /* Local Server */ = {
+			isa = PBXGroup;
+			children = (
+				96C14C772188DE7400F4104C /* OpenRestaurant.py */,
+				96C14C782188DE7400F4104C /* Images */,
+				96C14C7C2188DE7400F4104C /* menu.json */,
+				96C14C7D2188DE7400F4104C /* Steps To Run.txt */,
+			);
+			path = "Local Server";
+			sourceTree = "<group>";
+		};
+		96C14C782188DE7400F4104C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				96C14C792188DE7400F4104C /* Cart.png */,
+				96C14C7A2188DE7400F4104C /* README.md */,
+				96C14C7B2188DE7400F4104C /* Plate.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		96DD9DB32174DA20004612AF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +114,7 @@
 				96C14C6F2188DC0800F4104C /* Model Controllers */,
 				96DD9DD22174DA6D004612AF /* View Controllers */,
 				96DD9DD12174DA60004612AF /* Views */,
+				96C14C762188DE7400F4104C /* Local Server */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -172,9 +206,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C14C812188DE7400F4104C /* Plate.png in Resources */,
+				96C14C802188DE7400F4104C /* README.md in Resources */,
 				96DD9DCA2174DA21004612AF /* LaunchScreen.storyboard in Resources */,
+				96C14C832188DE7400F4104C /* Steps To Run.txt in Resources */,
 				96DD9DC72174DA21004612AF /* Assets.xcassets in Resources */,
+				96C14C7F2188DE7400F4104C /* Cart.png in Resources */,
 				96DD9DC52174DA20004612AF /* Main.storyboard in Resources */,
+				96C14C822188DE7400F4104C /* menu.json in Resources */,
+				96C14C7E2188DE7400F4104C /* OpenRestaurant.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
