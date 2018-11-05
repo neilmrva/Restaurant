@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -231,10 +230,54 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Order" id="3Rf-vl-myM"/>
+                    <connections>
+                        <segue destination="zIv-uv-WRU" kind="show" identifier="ConfirmationSegue" id="7uS-4A-S8h"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MM4-0S-A4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892" y="484.40779610194909"/>
+        </scene>
+        <!--Order Confirmation View Controller-->
+        <scene sceneID="WWI-iX-CNX">
+            <objects>
+                <viewController id="zIv-uv-WRU" userLabel="Order Confirmation View Controller" customClass="OrderConfirmationViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yKd-QQ-cKr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrn-cu-u02">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvW-W2-tEL">
+                                <rect key="frame" x="160.5" y="352" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="p6m-Cz-tfZ" kind="unwind" unwindAction="unwindToOrderListWithSegue:" id="Qhv-8V-aEC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HvW-W2-tEL" firstAttribute="centerX" secondItem="yKd-QQ-cKr" secondAttribute="centerX" id="Ad2-fx-HaX"/>
+                            <constraint firstItem="HvW-W2-tEL" firstAttribute="top" secondItem="yrn-cu-u02" secondAttribute="bottom" constant="8" id="KEs-7f-hSD"/>
+                            <constraint firstItem="qkD-Jb-a3O" firstAttribute="trailing" secondItem="yrn-cu-u02" secondAttribute="trailing" id="TTO-oi-2h4"/>
+                            <constraint firstItem="yrn-cu-u02" firstAttribute="centerY" secondItem="yKd-QQ-cKr" secondAttribute="centerY" id="dmC-0o-gi7"/>
+                            <constraint firstItem="yrn-cu-u02" firstAttribute="leading" secondItem="qkD-Jb-a3O" secondAttribute="leading" id="wxG-Os-bnv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qkD-Jb-a3O"/>
+                    </view>
+                    <connections>
+                        <outlet property="timeRemainingLabel" destination="yrn-cu-u02" id="prg-Xw-0S0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbV-8h-kGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="p6m-Cz-tfZ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="484"/>
         </scene>
         <!--Order Navigation Controller-->
         <scene sceneID="6Io-PS-ffF">

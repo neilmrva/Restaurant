@@ -24,6 +24,7 @@
 		96DD9DDB2174F085004612AF /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD9DDA2174F085004612AF /* MenuItemDetailViewController.swift */; };
 		96DD9DDD217500C4004612AF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD9DDC217500C4004612AF /* MenuItem.swift */; };
 		96DD9DE02175044E004612AF /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD9DDF2175044E004612AF /* IntermediaryModels.swift */; };
+		96F7A1052190B2230002AFBE /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7A1042190B2230002AFBE /* OrderConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		96DD9DDA2174F085004612AF /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		96DD9DDC217500C4004612AF /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		96DD9DDF2175044E004612AF /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
+		96F7A1042190B2230002AFBE /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				96DD9DD62174E173004612AF /* MenuTableViewController.swift */,
 				96DD9DD82174E184004612AF /* OrderTableViewController.swift */,
 				96DD9DDA2174F085004612AF /* MenuItemDetailViewController.swift */,
+				96F7A1042190B2230002AFBE /* OrderConfirmationViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				96DD9DDB2174F085004612AF /* MenuItemDetailViewController.swift in Sources */,
 				96DD9DD92174E184004612AF /* OrderTableViewController.swift in Sources */,
 				96DD9DE02175044E004612AF /* IntermediaryModels.swift in Sources */,
+				96F7A1052190B2230002AFBE /* OrderConfirmationViewController.swift in Sources */,
 				96C14C712188DC0800F4104C /* MenuModelController.swift in Sources */,
 				96DD9DC02174DA20004612AF /* AppDelegate.swift in Sources */,
 				96DD9DD52174E15E004612AF /* CategoryTableViewController.swift in Sources */,
