@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class MenuModelController
 {
     static let shared = MenuModelController()
     
     let baseURL = URL(string: "http://localhost:8090/")!
-    //let baseURL = URL(string: "http://192.168.0.9:8090/")!
+    //let baseURL = URL(string: "http://10.0.1.9:8090/")!
     
     func fetchCategories(completionHandler: @escaping ([String]?) -> Void)
     {
@@ -92,6 +93,26 @@ class MenuModelController
                 let jsonDecoder = JSONDecoder()
                 let preparationTime = try? jsonDecoder.decode(PreparationTime.self, from: data)
                 completionHandler(preparationTime?.prepTime)
+            }
+            else
+            {
+                completionHandler(nil)
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func fetchImage(url:URL, completionHandler: @escaping (UIImage?) -> Void)
+    {
+        let task = URLSession.shared.dataTask(with: url)
+        {
+            (data, response, error) in
+            
+            if let data = data
+            {
+                let image = UIImage(data: data)
+                completionHandler(image)
             }
             else
             {
