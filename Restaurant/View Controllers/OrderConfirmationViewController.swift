@@ -11,18 +11,15 @@ import UIKit
 class OrderConfirmationViewController: UIViewController
 {
     @IBOutlet weak var timeRemainingLabel:UILabel!
-    var minutes:Int!
+    var minutes:Int?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func unwindToOrderList(segue: UIStoryboardSegue)
-    {
-        
+        navigationItem.hidesBackButton = true
+        timeRemainingLabel.text = "Thank you for your order! Your wait time is approximately \(minutes!) minutes."
     }
 
     /*

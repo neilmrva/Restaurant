@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A2x-Pn-XeX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A2x-Pn-XeX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -229,7 +229,13 @@
                             <outlet property="delegate" destination="10Q-Ps-xC8" id="lBp-FU-pBm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Order" id="3Rf-vl-myM"/>
+                    <navigationItem key="navigationItem" title="Your Order" id="3Rf-vl-myM">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="hzG-jf-VAY">
+                            <connections>
+                                <action selector="submitTapped:" destination="10Q-Ps-xC8" id="E2j-H0-aAO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="zIv-uv-WRU" kind="show" identifier="ConfirmationSegue" id="7uS-4A-S8h"/>
                     </connections>
@@ -246,8 +252,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrn-cu-u02">
-                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrn-cu-u02">
+                                <rect key="frame" x="0.0" y="323.5" width="375" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -256,7 +262,7 @@
                                 <rect key="frame" x="160.5" y="352" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
-                                    <segue destination="p6m-Cz-tfZ" kind="unwind" unwindAction="unwindToOrderListWithSegue:" id="Qhv-8V-aEC"/>
+                                    <segue destination="p6m-Cz-tfZ" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToOrderListWithSegue:" id="jVy-C3-950"/>
                                 </connections>
                             </button>
                         </subviews>

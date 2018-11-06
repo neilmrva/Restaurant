@@ -16,12 +16,14 @@ protocol AddToOrderDelegate
 class OrderTableViewController: UITableViewController
 {
     var orderedMenuItems = [MenuItem]()
+    var orderMinutes = 0
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         navigationItem.leftBarButtonItem = editButtonItem
+        updateNavigationButtons()
     }
 
     // MARK: - Table view data source
@@ -59,9 +61,62 @@ class OrderTableViewController: UITableViewController
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             updateBadgeNumber()
+            updateNavigationButtons()
         }
     }
 
+    @IBAction func submitTapped(_ sender: Any)
+    {
+//        let orderTotal = orderedMenuItems.reduce(0.0)
+//        {
+//            (result, menuItem) -> Double in
+//
+//            return result + menuItem.price
+//        }
+        
+        var orderTotal = 0.0
+        for menuItem in orderedMenuItems
+        {
+            orderTotal += menuItem.price
+        }
+        
+        let formattedPrice = String(format: "$%.2f", orderTotal)
+        
+        let alert = UIAlertController(title: "Confirm Order", message: "You are about to submit your order with a total of \(formattedPrice)", preferredStyle: .alert)
+        
+        alert.addAction(
+            UIAlertAction(
+                title: "Submit", style: .default, handler:
+                {
+                    (action) in
+                    self.uploadOrder()
+                }
+            )
+        )
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
+    }
+    
+    func uploadOrder()
+    {
+        let menuIDs = orderedMenuItems.map { $0.id }
+        MenuModelController.shared.submitOrder(menuIDs: menuIDs, completionHandler: onSubmittedOrder)
+    }
+    
+    func onSubmittedOrder(minutes:Int?)
+    {
+        if let minutes = minutes
+        {
+            DispatchQueue.main.async
+            {
+                self.orderMinutes = minutes
+                self.performSegue(withIdentifier: "ConfirmationSegue", sender: nil)
+            }
+        }
+    }
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -77,20 +132,40 @@ class OrderTableViewController: UITableViewController
     }
     */
 
-    /*
-    // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "ConfirmationSegue"
+        {
+            let orderConfirmationViewController = segue.destination as! OrderConfirmationViewController
+            orderConfirmationViewController.minutes = orderMinutes
+        }
     }
-    */
     
     func updateBadgeNumber()
     {
         let orderCount = orderedMenuItems.count
         navigationController?.tabBarItem.badgeValue = orderCount > 0 ? "\(orderCount)" : nil
+    }
+    
+    func updateNavigationButtons()
+    {
+        let areThereItems = orderedMenuItems.count > 0
+        navigationItem.leftBarButtonItem?.isEnabled = areThereItems
+        navigationItem.rightBarButtonItem?.isEnabled = areThereItems
+    }
+    
+    @IBAction func unwindToOrderList(segue: UIStoryboardSegue)
+    {
+        if segue.identifier == "DismissConfirmation"
+        {
+            orderedMenuItems.removeAll()
+            tableView.reloadData()
+           
+            updateBadgeNumber()
+            updateNavigationButtons()
+        }
     }
 }
 
@@ -103,5 +178,6 @@ extension OrderTableViewController:AddToOrderDelegate
         
         tableView.insertRows(at: [indexPath], with: .automatic)
         updateBadgeNumber()
+        updateNavigationButtons()
     }
 }
