@@ -5,7 +5,7 @@
     "description": "Seasoned meatballs on top of freshly-made spaghetti. Served with a robust tomato sauce.",
     "price": 9.0,
     "category": "entrees",
-    "imageName": "Cart.png"
+    "imageName": "meatballs.jpeg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Tomato sauce, fresh mozzarella, basil, and extra-virgin olive oil.",
     "price": 10.0,
     "category": "entrees",
-    "imageName": ""
+    "imageName": "pizza.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Pacific steelhead trout* with lettuce, tomato, and red onion.",
     "price": 9.0,
     "category": "entrees",
-    "imageName": ""
+    "imageName": "trout.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Stewed sliced beef with yellow onions and garlic in a vinegar-soy sauce. Served with steamed jasmine rice and sautéed vegetables.",
     "price": 9.0,
     "category": "entrees",
-    "imageName": ""
+    "imageName": "pesto.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Delicious chicken simmered alongside yellow onions, carrots, celery, and bay leaves, chicken stock.",
     "price": 3.0,
     "category": "appetizers",
-    "imageName": ""
+    "imageName": "soup.jpg"
   },
   {
     "id": 6,
@@ -45,6 +45,6 @@
     "description": "Garlic, red onions, tomatoes, mushrooms, and olives on top of romaine lettuce.",
     "price": 5.0,
     "category": "salads",
-    "imageName": ""
+    "imageName": "salad.jpg"
   }
 ]

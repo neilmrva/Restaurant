@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		96C14C712188DC0800F4104C /* MenuModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C14C702188DC0800F4104C /* MenuModelController.swift */; };
 		96C14C7E2188DE7400F4104C /* OpenRestaurant.py in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C772188DE7400F4104C /* OpenRestaurant.py */; };
-		96C14C7F2188DE7400F4104C /* Cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C792188DE7400F4104C /* Cart.png */; };
 		96C14C802188DE7400F4104C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C7A2188DE7400F4104C /* README.md */; };
-		96C14C812188DE7400F4104C /* Plate.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C7B2188DE7400F4104C /* Plate.png */; };
 		96C14C822188DE7400F4104C /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C7C2188DE7400F4104C /* menu.json */; };
 		96C14C832188DE7400F4104C /* Steps To Run.txt in Resources */ = {isa = PBXBuildFile; fileRef = 96C14C7D2188DE7400F4104C /* Steps To Run.txt */; };
 		96DD9DC02174DA20004612AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD9DBF2174DA20004612AF /* AppDelegate.swift */; };
@@ -24,15 +22,19 @@
 		96DD9DDB2174F085004612AF /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD9DDA2174F085004612AF /* MenuItemDetailViewController.swift */; };
 		96DD9DDD217500C4004612AF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD9DDC217500C4004612AF /* MenuItem.swift */; };
 		96DD9DE02175044E004612AF /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD9DDF2175044E004612AF /* IntermediaryModels.swift */; };
+		96E54EA721924BD700C830A3 /* salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96E54EA121924BD600C830A3 /* salad.jpg */; };
+		96E54EA821924BD700C830A3 /* meatballs.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96E54EA221924BD600C830A3 /* meatballs.jpeg */; };
+		96E54EA921924BD700C830A3 /* soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96E54EA321924BD700C830A3 /* soup.jpg */; };
+		96E54EAA21924BD700C830A3 /* trout.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96E54EA421924BD700C830A3 /* trout.jpg */; };
+		96E54EAB21924BD700C830A3 /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96E54EA521924BD700C830A3 /* pizza.jpg */; };
+		96E54EAC21924BD700C830A3 /* pesto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96E54EA621924BD700C830A3 /* pesto.jpg */; };
 		96F7A1052190B2230002AFBE /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7A1042190B2230002AFBE /* OrderConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		96C14C702188DC0800F4104C /* MenuModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModelController.swift; sourceTree = "<group>"; };
 		96C14C772188DE7400F4104C /* OpenRestaurant.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = OpenRestaurant.py; sourceTree = "<group>"; };
-		96C14C792188DE7400F4104C /* Cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cart.png; sourceTree = "<group>"; };
 		96C14C7A2188DE7400F4104C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		96C14C7B2188DE7400F4104C /* Plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plate.png; sourceTree = "<group>"; };
 		96C14C7C2188DE7400F4104C /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		96C14C7D2188DE7400F4104C /* Steps To Run.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Steps To Run.txt"; sourceTree = "<group>"; };
 		96DD9DBC2174DA20004612AF /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,12 @@
 		96DD9DDA2174F085004612AF /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		96DD9DDC217500C4004612AF /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		96DD9DDF2175044E004612AF /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
+		96E54EA121924BD600C830A3 /* salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salad.jpg; sourceTree = "<group>"; };
+		96E54EA221924BD600C830A3 /* meatballs.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meatballs.jpeg; sourceTree = "<group>"; };
+		96E54EA321924BD700C830A3 /* soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soup.jpg; sourceTree = "<group>"; };
+		96E54EA421924BD700C830A3 /* trout.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trout.jpg; sourceTree = "<group>"; };
+		96E54EA521924BD700C830A3 /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza.jpg; sourceTree = "<group>"; };
+		96E54EA621924BD700C830A3 /* pesto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pesto.jpg; sourceTree = "<group>"; };
 		96F7A1042190B2230002AFBE /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,9 +91,13 @@
 		96C14C782188DE7400F4104C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				96C14C792188DE7400F4104C /* Cart.png */,
+				96E54EA221924BD600C830A3 /* meatballs.jpeg */,
+				96E54EA621924BD700C830A3 /* pesto.jpg */,
+				96E54EA521924BD700C830A3 /* pizza.jpg */,
+				96E54EA121924BD600C830A3 /* salad.jpg */,
+				96E54EA321924BD700C830A3 /* soup.jpg */,
+				96E54EA421924BD700C830A3 /* trout.jpg */,
 				96C14C7A2188DE7400F4104C /* README.md */,
-				96C14C7B2188DE7400F4104C /* Plate.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -209,14 +221,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C14C812188DE7400F4104C /* Plate.png in Resources */,
 				96C14C802188DE7400F4104C /* README.md in Resources */,
+				96E54EAC21924BD700C830A3 /* pesto.jpg in Resources */,
+				96E54EAB21924BD700C830A3 /* pizza.jpg in Resources */,
 				96DD9DCA2174DA21004612AF /* LaunchScreen.storyboard in Resources */,
 				96C14C832188DE7400F4104C /* Steps To Run.txt in Resources */,
 				96DD9DC72174DA21004612AF /* Assets.xcassets in Resources */,
-				96C14C7F2188DE7400F4104C /* Cart.png in Resources */,
+				96E54EA821924BD700C830A3 /* meatballs.jpeg in Resources */,
+				96E54EA721924BD700C830A3 /* salad.jpg in Resources */,
+				96E54EAA21924BD700C830A3 /* trout.jpg in Resources */,
 				96DD9DC52174DA20004612AF /* Main.storyboard in Resources */,
 				96C14C822188DE7400F4104C /* menu.json in Resources */,
+				96E54EA921924BD700C830A3 /* soup.jpg in Resources */,
 				96C14C7E2188DE7400F4104C /* OpenRestaurant.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
