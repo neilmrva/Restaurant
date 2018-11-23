@@ -30,12 +30,25 @@ class MenuItemDetailViewController: UIViewController
         priceLabel.text = String(format: "$%.2f", menuItem.price)
         addToOrderButton.layer.cornerRadius = 5.0
         
+        MenuModelController.shared.fetchImage(url: menuItem.imageURL, completionHandler: onImageFetched)
+        
         //Set delegate
         if let navigationController = tabBarController?.viewControllers?.last as? UINavigationController
         {
             if let orderTableViewController = navigationController.viewControllers.first as? OrderTableViewController
             {
                 delegate = orderTableViewController
+            }
+        }
+    }
+    
+    func onImageFetched(image:UIImage?)
+    {
+        if let image = image
+        {
+            DispatchQueue.main.async
+            {
+                self.imageView.image = image
             }
         }
     }

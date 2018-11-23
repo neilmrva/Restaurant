@@ -44,8 +44,29 @@ class MenuTableViewController: UITableViewController
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+        
+        MenuModelController.shared.fetchImage(url: menuItem.imageURL)
+        {
+            (image) in
+            
+            if let image = image
+            {
+                DispatchQueue.main.async
+                {
+                    if let currentIndexPath = self.tableView.indexPath(for: cell), currentIndexPath == indexPath
+                    {
+                        cell.imageView?.image = image
+                    }
+                }
+            }
+        }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100
     }
 
     // MARK: - Navigation

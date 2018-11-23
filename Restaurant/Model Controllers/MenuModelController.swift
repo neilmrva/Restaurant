@@ -108,7 +108,7 @@ class MenuModelController
         let task = URLSession.shared.dataTask(with: url)
         {
             (data, response, error) in
-            
+
             if let data = data
             {
                 let image = UIImage(data: data)
@@ -119,7 +119,7 @@ class MenuModelController
                 completionHandler(nil)
             }
         }
-        
+
         task.resume()
     }
 }
